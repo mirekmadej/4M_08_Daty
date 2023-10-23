@@ -8,24 +8,41 @@
             Spacing="25"
             Padding="30,0">
 
-            <HorizontalStackLayout Spacing="20">
-                <VerticalStackLayout WidthRequest="200">
-                    <Label
-                        Text="poczatek" />
-                    <DatePicker x:Name="dateStart" 
-                        Format="dd-mm-yyyy"  
+            <HorizontalStackLayout Spacing="20"
+                                   VerticalOptions="Center">
 
+                <Label
+                        Text="poczatek" 
+                    WidthRequest="100"
+                    VerticalOptions="Center"
+                    
+                    />
+                <DatePicker x:Name="dateStart" 
+                        Format="dd-mm-yyyy"  
+                        
+                        MaximumDate="12/30/2023"  
+                        DateSelected="datePoczatekSelected"
                         />
-                </VerticalStackLayout>
-                <VerticalStackLayout WidthRequest="200">
-                    <Label
-                        Text="koniec" />
-                    <DatePicker x:Name="dateKoniec" />
-                </VerticalStackLayout>            
             </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="20">
+                    <Label
+                        Text="koniec" 
+                        WidthRequest="100"
+                        VerticalOptions="Center"/>
+                    <DatePicker 
+                        x:Name="dateKoniec" 
+                        Format="dd-mm-yyyy" 
+                        
+                        MaximumDate="12/31/2023" 
+                                
+                                />
+                </HorizontalStackLayout>            
+            
             <HorizontalStackLayout Spacing="30">
                 <Label
-                    Text="liczba dni: 0" />
+                    Text="liczba dni: 0" 
+                    x:Name="lblLiczbaDni"
+                    VerticalOptions="Center"/>
                 <Button
                     Text="oblicz"
                     Clicked="btnObliczClicked"
