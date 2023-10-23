@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_4M_08_Daty.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0">
+
+            <HorizontalStackLayout Spacing="20">
+                <VerticalStackLayout WidthRequest="200">
+                    <Label
+                        Text="poczatek" />
+                    <DatePicker x:Name="dateStart" 
+                        Format="dd-mm-yyyy"  
+
+                        />
+                </VerticalStackLayout>
+                <VerticalStackLayout WidthRequest="200">
+                    <Label
+                        Text="koniec" />
+                    <DatePicker x:Name="dateKoniec" />
+                </VerticalStackLayout>            
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="30">
+                <Label
+                    Text="liczba dni: 0" />
+                <Button
+                    Text="oblicz"
+                    Clicked="btnObliczClicked"
+                    WidthRequest="150"
+                    />
+            </HorizontalStackLayout>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
